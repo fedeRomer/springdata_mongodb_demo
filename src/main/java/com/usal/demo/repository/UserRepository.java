@@ -6,10 +6,9 @@ import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
-import org.springframework.data.querydsl.QuerydslPredicateExecutor;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-
-public interface UserRepository extends MongoRepository<User, String>, QuerydslPredicateExecutor<User> {
+public interface UserRepository extends MongoRepository<User, String>{
     @Query("{ 'name' : ?0 }")
     List<User> findUsersByName(String name);
 
