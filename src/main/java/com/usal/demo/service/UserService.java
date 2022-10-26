@@ -45,6 +45,10 @@ public class UserService {
 
     }
 
+    public List<User> getUsersByAgeBetween(int ageGt, int ageLt){
+        return userRepository.findUsersByAgeBetween(ageGt,ageLt);
+    }
+
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }

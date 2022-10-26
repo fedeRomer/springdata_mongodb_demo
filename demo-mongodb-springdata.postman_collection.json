@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "add user mongoDb",
+			"name": "add user mongoDb (insert)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -120,7 +120,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "[\r\n    {\r\n\r\n        \"name\": \"pepe argento\",\r\n        \"age\": 21,\r\n        \"yearOfBirth\": null,\r\n        \"contact\": {\r\n            \"id\": \"1\",\r\n            \"phone\": \"1155223344\",\r\n            \"email\": \"pepe_argento@gmail.com\"\r\n        }\r\n    },\r\n    {\r\n\r\n        \"name\": \"pepe argento\",\r\n        \"age\": 21,\r\n        \"yearOfBirth\": null,\r\n        \"contact\": {\r\n            \"id\": \"1\",\r\n            \"phone\": \"1155223344\",\r\n            \"email\": \"pepe_argento@gmail.com\"\r\n        }\r\n    },\r\n    {\r\n\r\n        \"name\": \"pepe argento\",\r\n        \"age\": 21,\r\n        \"yearOfBirth\": null,\r\n        \"contact\": {\r\n            \"id\": \"1\",\r\n            \"phone\": \"1155223344\",\r\n            \"email\": \"pepe_argento@gmail.com\"\r\n        }\r\n    },\r\n    {\r\n\r\n        \"name\": \"pepe argento\",\r\n        \"age\": 21,\r\n        \"yearOfBirth\": null,\r\n        \"contact\": {\r\n            \"id\": \"1\",\r\n            \"phone\": \"1155223344\",\r\n            \"email\": \"pepe_argento@gmail.com\"\r\n        }\r\n    },\r\n    {\r\n\r\n        \"name\": \"pepe argento\",\r\n        \"age\": 21,\r\n        \"yearOfBirth\": null,\r\n        \"contact\": {\r\n            \"id\": \"1\",\r\n            \"phone\": \"1155223344\",\r\n            \"email\": \"pepe_argento@gmail.com\"\r\n        }\r\n    },\r\n    {\r\n\r\n        \"name\": \"pepe argento\",\r\n        \"age\": 21,\r\n        \"yearOfBirth\": null,\r\n        \"contact\": {\r\n            \"id\": \"1\",\r\n            \"phone\": \"1155223344\",\r\n            \"email\": \"pepe_argento@gmail.com\"\r\n        }\r\n    },\r\n    {\r\n\r\n        \"name\": \"pepe argento\",\r\n        \"age\": 21,\r\n        \"yearOfBirth\": null,\r\n        \"contact\": {\r\n            \"id\": \"1\",\r\n            \"phone\": \"1155223344\",\r\n            \"email\": \"pepe_argento@gmail.com\"\r\n        }\r\n    },\r\n    {\r\n\r\n        \"name\": \"pepe argento\",\r\n        \"age\": 21,\r\n        \"yearOfBirth\": null,\r\n        \"contact\": {\r\n            \"id\": \"1\",\r\n            \"phone\": \"1155223344\",\r\n            \"email\": \"pepe_argento@gmail.com\"\r\n        }\r\n    },\r\n    {\r\n\r\n        \"name\": \"pepe argento\",\r\n        \"age\": 21,\r\n        \"yearOfBirth\": null,\r\n        \"contact\": {\r\n            \"id\": \"1\",\r\n            \"phone\": \"1155223344\",\r\n            \"email\": \"pepe_argento@gmail.com\"\r\n        }\r\n    },\r\n    {\r\n\r\n        \"name\": \"pepe argento\",\r\n        \"age\": 21,\r\n        \"yearOfBirth\": null,\r\n        \"contact\": {\r\n            \"id\": \"1\",\r\n            \"phone\": \"1155223344\",\r\n            \"email\": \"pepe_argento@gmail.com\"\r\n        }\r\n    }\r\n]",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -137,6 +137,38 @@
 						"api",
 						"user",
 						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getusersbyagebetween",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ageGt\":0,\r\n    \"ageLt\":22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/getusersbyagebetween",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"getusersbyagebetween"
 					]
 				}
 			},

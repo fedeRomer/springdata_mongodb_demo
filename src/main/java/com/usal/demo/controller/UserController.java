@@ -1,6 +1,7 @@
 package com.usal.demo.controller;
 
 import com.usal.demo.model.User;
+import com.usal.demo.model.UserAgeRequest;
 import com.usal.demo.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,6 +40,11 @@ public class UserController {
     public ResponseEntity updateUser(@RequestBody User user) {
         userService.updateUser(user);
         return ResponseEntity.status(HttpStatus.OK).build();
+    }
+
+    @GetMapping("/getusersbyagebetween")
+    public ResponseEntity getUsersByAgeBetween(@RequestBody UserAgeRequest userAgeRequest){
+        return ResponseEntity.ok(userService.getUsersByAgeBetween(userAgeRequest.getAgeGt(), userAgeRequest.getAgeLt()));
     }
 
     @GetMapping("/getall")
