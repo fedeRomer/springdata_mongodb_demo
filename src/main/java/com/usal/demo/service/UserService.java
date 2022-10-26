@@ -19,6 +19,14 @@ public class UserService {
         userRepository.insert(user);
     }
 
+    public void addList(List<User> userList){
+        userRepository.saveAll(userList);
+    }
+
+    public User addUserWithSave(User user){
+        return userRepository.save(user);
+    }
+
     public void updateUser(User user) {
         User savedUser = userRepository.findById(user.getId())
                 .orElseThrow(() ->
@@ -34,6 +42,7 @@ public class UserService {
         savedUser.setContact(user.getContact());
 
         userRepository.save(user);
+
     }
 
     public List<User> getAllUsers() {

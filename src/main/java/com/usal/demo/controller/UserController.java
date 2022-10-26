@@ -24,6 +24,17 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
+    @PostMapping("/list")
+    public ResponseEntity addUser(@RequestBody List<User> userlist){
+        userService.addList(userlist);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    @PostMapping("/save")
+    public ResponseEntity saveUser(@RequestBody User user) {
+        return ResponseEntity.ok(userService.addUserWithSave(user));
+    }
+
     @PutMapping
     public ResponseEntity updateUser(@RequestBody User user) {
         userService.updateUser(user);
